@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Terraform Proxmox
+=======
+name: Terraform Test
+>>>>>>> adbae27 (add workflow)
 
 on:
   push:
@@ -6,11 +10,19 @@ on:
       - main
 
 jobs:
+<<<<<<< HEAD
   apply:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
+=======
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+>>>>>>> adbae27 (add workflow)
         uses: actions/checkout@v4
 
       - name: Setup Terraform
