@@ -1,0 +1,23 @@
+name: Terraform Proxmox
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Init
+        run: terraform init
+
+      - name: Apply
+        run: terraform apply -auto-approve
